@@ -5,7 +5,8 @@
   "scripts": {
     "build:verwaltung": "nx build nxgut.Verwaltung --configuration=production",
     "postbuild:verwaltung": "node apps/nxgut.Verwaltung/scripts/write-version.js",
-    "build-and-version:verwaltung": "npm run build:verwaltung && npm run postbuild:verwaltung"
+    "sync-version:verwaltung": "node apps/nxgut.Verwaltung/scripts/sync-version-from-tag.js",
+    "build-and-version:verwaltung": "npm run sync-version:verwaltung && npm run build:verwaltung && npm run postbuild:verwaltung"
   },
   "private": true,
   "dependencies": {
