@@ -1,0 +1,9 @@
+{
+  "name": "nxgut.Verwaltung-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/nxgut.Verwaltung-e2e/src",
+  "implicitDependencies": ["nxgut.Verwaltung"],
+  "// targets": "to see all targets run: nx show project nxgut.Verwaltung-e2e --web",
+  "targets": {}
+}
