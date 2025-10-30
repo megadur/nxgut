@@ -77,6 +77,13 @@
         "tsConfig": "apps/nxgut.Verwaltung/tsconfig.spec.json"
       }
     },
+    "postbuild-version": {
+      "executor": "@nx/js:run-script",
+      "options": {
+        "script": "node apps/nxgut.Verwaltung/scripts/write-version.js"
+      },
+      "dependsOn": ["build"]
+    },
     "serve-static": {
       "continuous": true,
       "executor": "@nx/web:file-server",
@@ -86,6 +93,15 @@
         "staticFilePath": "dist/apps/nxgut.Verwaltung/browser",
         "spa": true
       }
+    }
+  },
+  "release": {
+    "version": {
+      "project": null,
+      "versionActions": []
+    },
+    "changelog": {
+      "projectChangelogs": false
     }
   }
 }

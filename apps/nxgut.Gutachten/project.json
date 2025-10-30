@@ -1,4 +1,5 @@
 {
+  "version": "1.0.0",
   "name": "nxgut.Gutachten",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
@@ -86,6 +87,15 @@
         "staticFilePath": "dist/apps/nxgut.Gutachten/browser",
         "spa": true
       }
+    }
+  },
+  "release": {
+    "version": {
+      "project": null,
+      "versionActions": [] 
+    },
+    "changelog": {
+      "projectChangelogs": false 
     }
   }
 }
