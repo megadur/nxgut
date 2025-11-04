@@ -9,8 +9,10 @@
     "version:gutachten:patch": "node scripts/version-bump.js nxgut.Gutachten patch",
     "version:gutachten:minor": "node scripts/version-bump.js nxgut.Gutachten minor",
     "version:gutachten:major": "node scripts/version-bump.js nxgut.Gutachten major",
-    "build:verwaltung": "npx nx build nxgut.Verwaltung --configuration=production",
-    "build:gutachten": "npx nx build nxgut.Gutachten --configuration=production"
+    "build:verwaltung": "node scripts/sync-env-from-metadata.js nxgut.Verwaltung && npx nx build nxgut.Verwaltung --configuration=production",
+    "build:gutachten": "node scripts/sync-env-from-metadata.js nxgut.Gutachten && npx nx build nxgut.Gutachten --configuration=production",
+    "sync:verwaltung": "node scripts/sync-env-from-metadata.js nxgut.Verwaltung",
+    "sync:gutachten": "node scripts/sync-env-from-metadata.js nxgut.Gutachten"
   },
   "private": true,
   "dependencies": {
