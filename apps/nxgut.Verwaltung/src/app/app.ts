@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { APP_VERSION } from './version';
 import { RouterModule } from '@angular/router';
 import { NxWelcome } from './nx-welcome';
+import { environment } from '../environments/environment';
 
 @Component({
   imports: [NxWelcome, RouterModule],
@@ -11,5 +11,8 @@ import { NxWelcome } from './nx-welcome';
 })
 export class App {
   protected title = 'nxgut.Verwaltung';
-  protected appVersion = APP_VERSION;
+  
+  get appVersion(): string {
+    return environment.version;
+  }
 }

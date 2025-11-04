@@ -1,5 +1,4 @@
 {
-  "version": "1.0.0",
   "name": "nxgut.Gutachten",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
@@ -38,7 +37,13 @@
               "maximumError": "8kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "fileReplacements": [
+            {
+              "replace": "apps/nxgut.Gutachten/src/environments/environment.ts",
+              "with": "apps/nxgut.Gutachten/src/environments/environment.prod.ts"
+            }
+          ]
         },
         "development": {
           "optimization": false,
@@ -87,15 +92,6 @@
         "staticFilePath": "dist/apps/nxgut.Gutachten/browser",
         "spa": true
       }
-    }
-  },
-  "release": {
-    "version": {
-      "project": null,
-      "versionActions": [] 
-    },
-    "changelog": {
-      "projectChangelogs": false 
     }
   }
 }

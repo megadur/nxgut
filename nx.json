@@ -80,18 +80,6 @@
   },
   "release": {
     "projectsRelationship": "independent",
-    "releaseTagPattern": "{projectName}@{version}", 
-
-    "groups": {
-      "angular-apps": {
-        "projects": ["nxgut.Verwaltung", "nxgut.Gutachten"],
-        "version": {
-          "versionActions": ["update-package-json"]
-        },
-        "changelog": {
-          "projectChangelogs": false
-        }
-      }
-    }
+    "releaseTagPattern": "{projectName}-v{version}"
   }
 }

@@ -37,7 +37,13 @@
               "maximumError": "8kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "fileReplacements": [
+            {
+              "replace": "apps/nxgut.Verwaltung/src/environments/environment.ts",
+              "with": "apps/nxgut.Verwaltung/src/environments/environment.prod.ts"
+            }
+          ]
         },
         "development": {
           "optimization": false,
@@ -93,15 +99,6 @@
         "staticFilePath": "dist/apps/nxgut.Verwaltung/browser",
         "spa": true
       }
-    }
-  },
-  "release": {
-    "version": {
-      "project": null,
-      "versionActions": []
-    },
-    "changelog": {
-      "projectChangelogs": false
     }
   }
 }

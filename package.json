@@ -3,14 +3,14 @@
   "version": "2.0.1",
   "license": "MIT",
   "scripts": {
-    "build:verwaltung": "nx build nxgut.Verwaltung --configuration=production",
-    "postbuild:verwaltung": "node apps/nxgut.Verwaltung/scripts/write-version.js",
-    "sync-version:verwaltung": "node apps/nxgut.Verwaltung/scripts/sync-version-from-tag.js",
-    "build-and-version:verwaltung": "npm run sync-version:verwaltung && npm run build:verwaltung && npm run postbuild:verwaltung",
-    "build:gutachten": "nx build nxgut.Gutachten --configuration=production",
-    "postbuild:gutachten": "node apps/nxgut.Gutachten/scripts/write-version.js",
-    "sync-version:gutachten": "node apps/nxgut.Gutachten/scripts/sync-version-from-tag.js",
-    "build-and-version:gutachten": "npm run sync-version:gutachten && npm run build:gutachten && npm run postbuild:gutachten"
+    "version:verwaltung:patch": "node scripts/version-bump.js nxgut.Verwaltung patch",
+    "version:verwaltung:minor": "node scripts/version-bump.js nxgut.Verwaltung minor",
+    "version:verwaltung:major": "node scripts/version-bump.js nxgut.Verwaltung major",
+    "version:gutachten:patch": "node scripts/version-bump.js nxgut.Gutachten patch",
+    "version:gutachten:minor": "node scripts/version-bump.js nxgut.Gutachten minor",
+    "version:gutachten:major": "node scripts/version-bump.js nxgut.Gutachten major",
+    "build:verwaltung": "npx nx build nxgut.Verwaltung --configuration=production",
+    "build:gutachten": "npx nx build nxgut.Gutachten --configuration=production"
   },
   "private": true,
   "dependencies": {
@@ -31,7 +31,6 @@
     "@angular/cli": "~20.3.0",
     "@angular/compiler-cli": "~20.3.0",
     "@angular/language-service": "~20.3.0",
-    "@changesets/cli": "^2.29.7",
     "@eslint/js": "^9.8.0",
     "@nx/angular": "22.0.2",
     "@nx/devkit": "22.0.2",
