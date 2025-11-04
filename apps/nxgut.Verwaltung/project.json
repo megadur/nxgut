@@ -8,11 +8,15 @@
   "targets": {
     "build": {
       "executor": "@angular/build:application",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/nxgut.Verwaltung",
         "browser": "apps/nxgut.Verwaltung/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/nxgut.Verwaltung/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
@@ -21,7 +25,9 @@
             "input": "apps/nxgut.Verwaltung/public"
           }
         ],
-        "styles": ["apps/nxgut.Verwaltung/src/styles.scss"]
+        "styles": [
+          "apps/nxgut.Verwaltung/src/styles.scss"
+        ]
       },
       "configurations": {
         "production": {
@@ -77,18 +83,13 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/nxgut.Verwaltung/jest.config.ts",
         "tsConfig": "apps/nxgut.Verwaltung/tsconfig.spec.json"
       }
-    },
-    "postbuild-version": {
-      "executor": "@nx/js:run-script",
-      "options": {
-        "script": "node apps/nxgut.Verwaltung/scripts/write-version.js"
-      },
-      "dependsOn": ["build"]
     },
     "serve-static": {
       "continuous": true,
@@ -100,5 +101,8 @@
         "spa": true
       }
     }
+  },
+  "metadata": {
+    "version": "2.0.3"
   }
 }
