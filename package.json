@@ -6,7 +6,11 @@
     "build:verwaltung": "nx build nxgut.Verwaltung --configuration=production",
     "postbuild:verwaltung": "node apps/nxgut.Verwaltung/scripts/write-version.js",
     "sync-version:verwaltung": "node apps/nxgut.Verwaltung/scripts/sync-version-from-tag.js",
-    "build-and-version:verwaltung": "npm run sync-version:verwaltung && npm run build:verwaltung && npm run postbuild:verwaltung"
+    "build-and-version:verwaltung": "npm run sync-version:verwaltung && npm run build:verwaltung && npm run postbuild:verwaltung",
+    "build:gutachten": "nx build nxgut.Gutachten --configuration=production",
+    "postbuild:gutachten": "node apps/nxgut.Gutachten/scripts/write-version.js",
+    "sync-version:gutachten": "node apps/nxgut.Gutachten/scripts/sync-version-from-tag.js",
+    "build-and-version:gutachten": "npm run sync-version:gutachten && npm run build:gutachten && npm run postbuild:gutachten"
   },
   "private": true,
   "dependencies": {
